@@ -1,0 +1,15 @@
+/*auth godaangel*/
+/*注：此css文件仅供demo使用，非必须样式*/
+.demo-intro{
+	padding: 15px;
+	background: #fff;
+	line-height: 1.6;
+}
+.details-intro{
+	padding-left: 15px;
+}
+.details-intro::before{
+	content: "*";
+	margin-right: 5px;
+	font-size: 1rem;
+}

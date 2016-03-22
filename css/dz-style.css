@@ -1,0 +1,514 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	color: #34495E;
+	font-family:Helvetica;
+	position: relative;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+@media screen and (min-width: 320px) {
+    html {font-size: 14px;}
+}
+ 
+@media screen and (min-width: 360px) {
+    html {font-size: 16px;}
+}
+ 
+@media screen and (min-width: 400px) {
+    html {font-size: 18px;}
+}
+ 
+@media screen and (min-width: 440px) {
+    html {font-size: 20px;}
+}
+ 
+@media screen and (min-width: 480px) {
+    html {font-size: 22px;}
+}
+ 
+@media screen and (min-width: 640px) {
+    html {font-size: 28px;}
+}
+
+body{
+	background: #f4f4f4;
+	line-height: normal;
+}
+a,a:hover{ text-decoration:none;outline:none}
+a:focus{
+text-decoration:none;
+outline:none;
+}
+select{
+	appearance:none;
+	-moz-appearance:none; /* Firefox */
+	-webkit-appearance:none; /* Safari 和 Chrome */
+}
+
+@font-face {font-family: "iconfont";
+  src: url('./font/iconfont.eot'); /* IE9*/
+  src: url('./font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./font/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('./font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('./font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:1rem;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-shezhi:before { content: "\e600"; }
+.icon-tags:before { content: "\e601"; }
+.icon-message:before { content: "\e602"; }
+.icon-boshi:before { content: "\e603"; }
+.icon-menu:before { content: "\e60f"; }
+.icon-xingbienan:before { content: "\e604"; }
+.icon-xingbienv:before { content: "\e605"; }
+.icon-message1:before { content: "\e606"; }
+.icon-haoyou:before { content: "\e607"; }
+.icon-sousuo:before { content: "\e608"; }
+.icon-zhaopian:before { content: "\e609"; }
+.icon-zuanshi:before { content: "\e60a"; }
+.icon-biaoxingfill:before { content: "\e60b"; }
+.icon-biaoxing:before { content: "\e60c"; }
+.icon-position:before { content: "\e60d"; }
+.icon-cake:before { content: "\e60e"; }
+.icon-list:before { content: "\e610"; }
+.icon-edit:before { content: "\e611"; }
+.icon-xiangshang1:before { content: "\e612"; }
+.icon-angelBottom:before { content: "\e613"; }
+.icon-bottom:before { content: "\e614"; }
+.icon-top:before { content: "\e615"; }
+.icon-right:before { content: "\e616"; }
+.icon-left:before { content: "\e617"; }
+.icon-guanbi2fill:before { content: "\e618"; }
+.icon-guanbi2:before { content: "\e619"; }
+.icon-jiahao1:before { content: "\e61a"; }
+
+.weui_toast.small{
+  width: 5.6em;
+  min-height: 5.6em;
+  top: calc(180px + 1.2em);
+  left: calc(50% + 1em);
+}
+.weui_toast.small .weui_loading{
+  top: 50%;
+}
+
+.dz-bg-gray{
+	background:#ccc!important;
+}
+.hide{
+	display: none;
+}
+.color-fff{
+	color: #fff;
+}
+.color-ccc{
+	color: #ccc;
+}
+.color-999{
+	color: #999;
+}
+.color-666{
+	color: #666;
+}
+.color-blue{
+	color: #199AE2;
+}
+.color-orange{
+	color: #f06436;
+}
+.color-green{
+	color: #16A085;
+}
+
+.font-xi{
+	font-weight: 200;
+}
+.font-bold{
+	font-weight: 600;
+}
+.text-center{
+	text-align: center!important;
+}
+.text-right{
+	text-align: right!important;
+}
+.text-left{
+	text-align: left!important;
+}
+.vertical-top{
+	vertical-align: top;
+}
+.vertical-middle{
+	vertical-align: middle;
+}
+.padding-15{
+	padding: 1rem;
+}
+.dz-text-overflow-1{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+}
+.dz-text-overflow-2{
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.dz-text-overflow-3{
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+.dz-head{
+	height: 3rem;
+	text-align: center;
+	font-size: 1.2rem;
+	background: #1ABC9C;
+	line-height: 3rem;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	color: #fff;
+}
+.dz-head .left-icon{
+	position: absolute;
+    left: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    top: 0px;
+}
+.dz-head .right-icon{
+	position: absolute;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    top: 0px;
+}
+.dz-head .left-word{
+	position: absolute;
+    left: 10px;
+    font-size: 1rem;
+    color: #fff;
+    top: 0px;
+}
+.dz-head .right-word{
+	position: absolute;
+    right: 10px;
+    font-size: 1rem;
+    color: #fff;
+    top: 0px;
+}
+.dz-body{
+	background: #f4f4f4;
+	height: 100%;
+	z-index: 1;
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+}
+.dz-flex-wrap{ display: -webkit-box;	display: -webkit-flex;	display: flex; }
+.dz-flex-con{     -webkit-box-flex: 1;     -webkit-flex: 1;    flex: 1;}
+.dz-flex-vertical{ -webkit-box-orient: vertical;-webkit-flex-flow: column;flex-flow: column;}
+
+/*列表项--菜单列表*/
+.dz-menu-list-group{
+	margin-bottom: 0.6rem;
+}
+.dz-menu-list{
+	display: block;
+	padding: 0.8rem 1rem;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
+.dz-menu-list:last-child{
+	border-bottom: none;
+}
+.dz-menu-list .dz-icon-left{
+	display: inline-block;
+	width: 1.6rem;
+	font-size: 1.5rem;
+    vertical-align: middle;
+}
+.dz-menu-list .dz-icon-right{
+	position: absolute;
+    right: 1rem;
+    top: calc(50% - 0.6rem);
+    font-size: 1.2rem;
+    color: #999;
+}
+.dz-menu-list .dz-menu-title{
+	vertical-align: middle;
+	font-size: 1rem;
+}
+/*列表项--展示列表*/
+.dz-item-list{
+	display: block;
+	padding: 1rem;
+	background: #fff;
+	margin-bottom: 0.6rem;
+}
+.dz-item-list.dz-with-img{
+	display: block;
+	padding: 1rem;
+	background: #fff;
+	min-height: 6rem;
+}
+.dz-item-list.dz-with-img .dz-item-img{
+	width: 4rem;
+	height: 4rem;
+	background: url("../images/photo.png") no-repeat center;
+	background-size: cover;
+	position: absolute;
+	/*top: calc(50% - 2rem);*/
+	top: 1rem;
+    left: 1rem;
+    border-radius: 0.2rem;
+}
+.dz-item-list.dz-with-img.dz-img-middle .dz-item-img{
+	width: 4rem;
+	height: 4rem;
+	background: url("../images/photo.png") no-repeat center;
+	background-size: cover;
+	position: absolute;
+	top: calc(50% - 2rem);
+    left: 1rem;
+}
+.dz-item-list.dz-with-img .dz-item-info{
+	margin-left: 5rem;
+}
+.dz-item-list .dz-item-info .dz-item-title{
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+.dz-item-list .dz-item-info .dz-item-sub-title{
+	font-size: 1rem;
+	color: #BDC3C7;
+}
+.dz-item-list .dz-item-info .dz-item-other-info{
+	font-size: 0.8rem;
+	color: #BDC3C7;
+	margin-top: 0.5rem;
+}
+
+/*表单项*/
+.dz-form-group{
+	margin-bottom: 0.6rem;
+}
+.dz-form-group .dz-form-cell{
+	display: block;
+	padding: 0.8rem 1rem;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
+.dz-form-group .dz-switch-cell,.dz-form-group .dz-select-cell{
+	padding: 0.5rem 1rem;
+}
+.dz-form-group .dz-form-cell:last-child{
+	border-bottom: none;
+}
+.dz-form-cell .dz-form-head{
+	padding-right: 1rem;
+}
+.dz-form-cell .dz-form-body{
+	width: 100%;
+}
+.dz-form-cell .dz-form-head, .dz-form-cell .dz-form-body{
+	display: table-cell;
+	vertical-align: middle;
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: nowrap;
+}
+.dz-form-cell .dz-form-label{
+	display: block;
+	width: 4rem;
+}
+.dz-form-cell .dz-form-input{
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	height: 1.5rem;
+	padding-left: 0.3rem;
+	border: none;
+}
+.dz-switch {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  width: 3.25rem;
+  height: 2rem;
+  border: 1px solid #DFDFDF;
+  outline: 0;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  background: #DFDFDF;
+}
+.dz-switch:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.125rem;
+  height: 1.875rem;
+  border-radius: 0.94rem;
+  background-color: #FDFDFD;
+  -webkit-transition: -webkit-transform .3s;
+          transition: transform .3s;
+}
+.dz-switch:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 0.94rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  -webkit-transition: -webkit-transform .3s;
+          transition: transform .3s;
+}
+.dz-switch:checked {
+  border-color: #04BE02;
+  background-color: #04BE02;
+}
+.dz-switch:checked:before {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+.dz-switch:checked:after {
+  -webkit-transform: translateX(1.25rem);
+      -ms-transform: translateX(1.25rem);
+          transform: translateX(1.25rem);
+}
+.dz-form-cell .dz-select{
+	-webkit-appearance: none;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	font-size: inherit;
+	height: 2.5rem;
+	position: relative;
+	z-index: 1;
+	width: auto;
+}
+.dz-form-cell .dz-form-head .dz-icon-right{
+	position: absolute;
+    right: -0.1rem;
+    top: calc(50% - 0.5rem);
+    font-size: 1rem;
+    color: #999;
+}
+.dz-form-cell .dz-select-lg .dz-select{
+	-webkit-appearance: none;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	width: 100%;
+	font-size: inherit;
+	height: 2.5rem;
+	position: relative;
+	z-index: 1;
+	padding-left: 0.3rem;
+}
+.dz-form-cell .dz-select-md .dz-select{
+	-webkit-appearance: none;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	width: auto;
+	font-size: inherit;
+	height: 2.5rem;
+	position: relative;
+	z-index: 1;
+	padding-left: 0.3rem;
+	float: left;
+}
+.dz-form-cell .dz-select-lg .dz-icon-right{
+	position: absolute;
+    right: 1rem;
+    top: calc(50% - 0.6rem);
+    font-size: 1.2rem;
+    color: #999;
+}
+.dz-form-cell .dz-select-md .dz-icon-right{
+	float: left;
+	top: 0.6rem;
+	left: 0.5rem;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/*按钮*/
+.dz-btn{
+	height: 2.5rem;
+    width: 6rem;
+    background: #1ABC9C;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 3px;
+}
+.dz-btn:active{
+    background: #16A085;
+    color: #eee;
+}
+.dz-btn-success{
+    background: #2ECC71;
+}
+.dz-btn-success:active{
+    background: #27AE60;
+    color: #eee;
+}
+.dz-btn-info{
+    background: #3498DB;
+}
+.dz-btn-info:active{
+    background: #2980B9;
+    color: #eee;
+}
+.dz-btn-warning{
+    background: #F1C40F;
+}
+.dz-btn-warning:active{
+    background: #F39C12;
+    color: #eee;
+}
+.dz-btn-danger{
+    background: #E74C3C;
+}
+.dz-btn-danger:active{
+    background: #C0392B;
+    color: #eee;
+}
+.dz-btn-disabled{
+    background: #bdc3c7;
+    color: rgba(255,255,255,0.75);
+}
+.dz-btn-disabled:active{
+    background: #bdc3c7;
+}
+.dz-btn-lg{
+	width: 100%;
+}
+.dz-btn-md{
+	width: 50%;
+}
+
