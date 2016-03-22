@@ -466,35 +466,35 @@ select{
     border: none;
     border-radius: 3px;
 }
-.dz-btn:active{
+.dz-btn:active,.dz-btn:visited{
     background: #16A085;
     color: #eee;
 }
 .dz-btn-success{
     background: #2ECC71;
 }
-.dz-btn-success:active{
+.dz-btn-success:active,.dz-btn-success:visited{
     background: #27AE60;
     color: #eee;
 }
 .dz-btn-info{
     background: #3498DB;
 }
-.dz-btn-info:active{
+.dz-btn-info:active,.dz-btn-info:visited{
     background: #2980B9;
     color: #eee;
 }
 .dz-btn-warning{
     background: #F1C40F;
 }
-.dz-btn-warning:active{
+.dz-btn-warning:active,.dz-btn-warning:visited{
     background: #F39C12;
     color: #eee;
 }
 .dz-btn-danger{
     background: #E74C3C;
 }
-.dz-btn-danger:active{
+.dz-btn-danger:active,.dz-btn-danger:visited{
     background: #C0392B;
     color: #eee;
 }
@@ -502,7 +502,7 @@ select{
     background: #bdc3c7;
     color: rgba(255,255,255,0.75);
 }
-.dz-btn-disabled:active{
+.dz-btn-disabled:active,.dz-btn-disabled:visited{
     background: #bdc3c7;
 }
 .dz-btn-lg{
@@ -512,3 +512,61 @@ select{
 	width: 50%;
 }
 
+/*弹出框*/
+.dz-pop-bg{
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background: rgba(0,0,0,0.5);
+	z-index: 998;
+}
+.dz-pop-body{
+	position: fixed;
+	z-index: 999;
+	width: 85%;
+  	top: 50%;
+  	left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: #fff;
+    width: 16rem;
+    margin: 0 auto;
+    border: none;
+    border-radius: 3px;
+}
+.dz-pop-head{
+	font-size: 1.1rem;
+	padding: 1rem 1rem 0.5rem 1rem;
+	text-align: center;
+}
+.dz-pop-middle{
+	padding: 0.2rem 1rem 0.8rem 1rem;
+	border-bottom: 1px solid #eee;
+	text-align: center;
+	color: #999;
+}
+.dz-pop-middle p{
+	color: #999;
+}
+.dz-pop-foot{
+	padding: 0.6rem 1rem;
+	text-align: center;
+	display: -webkit-box;	
+	display: -webkit-flex;	
+	display: flex;
+}
+.dz-pop-foot .dz-pop-comfirm{
+	color: #16A085;
+}
+.dz-pop-foot .dz-pop-cancel{
+	color: #BDC3C7;
+}
+.dz-pop-foot span{
+	-webkit-box-flex: 1;     
+	-webkit-flex: 1;    
+	flex: 1;
+	font-size: 1.1rem;
+}
