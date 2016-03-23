@@ -14,21 +14,111 @@
 <body>
 	<header class="dz-head">
 		<i class="iconfont icon-left left-icon go-back"></i>
-		DZUI-Demo-
+		DZUI-Demo-Toast
 	</header>
 	<div class="dz-body">
-		<h3 class="padding-15">列表</h3>
+		<h3 class="padding-15">Toast</h3>
+		<div class="dz-form-group text-center padding-15">
+			<button class="dz-btn dz-btn-md dz-btn-info">loading</button>
+		</div>
+		<div class="dz-form-group text-center padding-15">
+			<button class="dz-btn dz-btn-md dz-btn-danger">toast default</button>
+		</div>
+		<div class="dz-form-group text-center padding-15">
+			<button class="dz-btn dz-btn-md" id="show-md">toast md</button>
+		</div>
+		<div class="dz-form-group text-center padding-15">
+			<button class="dz-btn dz-btn-md dz-btn-warning" id="show-top">toast top</button>
+		</div>
+<!-- 		<div class="dz-form-group text-center padding-15">
+			<button class="dz-btn dz-btn-md dz-btn-success">success</button>
+		</div> -->
 	</div>
 	<div class="demo-intro">
 		<h3>样式说明</h3>
-		<p></p>
-		<p class="details-intro"></p>
+		<p>1、loading样式仅有一种</p>
+		<p>2、toast样式有上、中、下三种，弹出效果为渐显往上</p>
+		<p class="details-intro">默认是下部，【dz_toast_md】是中部class，【dz_toast_top】是上部class</p>
 	</div>
+
+	<!-- loading toast -->
+	<div id="loadingToast" class="dz_loading_toast" style="display: none;">
+	    <div class="dz_mask_transparent"></div>
+	    <div class="dz_toast_loading small">
+	        <div class="dz_loading">
+	            <div class="dz_loading_leaf dz_loading_leaf_0"></div>
+	            <div class="dz_loading_leaf dz_loading_leaf_1"></div>
+	            <div class="dz_loading_leaf dz_loading_leaf_2"></div>
+	            <div class="dz_loading_leaf dz_loading_leaf_3"></div>
+	            <div class="dz_loading_leaf dz_loading_leaf_4"></div>
+	            <div class="dz_loading_leaf dz_loading_leaf_5"></div>
+	            <div class="dz_loading_leaf dz_loading_leaf_6"></div>
+	            <div class="dz_loading_leaf dz_loading_leaf_7"></div>
+	            <div class="dz_loading_leaf dz_loading_leaf_8"></div>
+	            <div class="dz_loading_leaf dz_loading_leaf_9"></div>
+	            <div class="dz_loading_leaf dz_loading_leaf_10"></div>
+	            <div class="dz_loading_leaf dz_loading_leaf_11"></div>
+	        </div>
+	        <!--<p class="dz_toast_content">数据加载中</p>-->
+	    </div>
+	</div>
+	<!--end loading toast-->
+	<!--BEGIN toast-->
+    <div id="toast" style="display: none;">
+        <div class="dz_toast">
+            <p class="dz_toast_content color-fff">我是Toast-底部默认</p>
+        </div>
+    </div>
+    <!--end toast-->
+
+    <!--BEGIN toast-->
+    <div id="toast-md" style="display: none;">
+        <div class="dz_toast dz_toast_md">
+            <p class="dz_toast_content color-fff">我是Toast-中部</p>
+        </div>
+    </div>
+    <!--end toast-->
+
+    <!--BEGIN toast-->
+    <div id="toast-top" style="display: none;">
+        <div class="dz_toast dz_toast_top">
+            <p class="dz_toast_content color-fff">我是Toast-上部</p>
+        </div>
+    </div>
+    <!--end toast-->
 </body>
 
 </html>
 <script src="../js/zepto.min.js"></script>
 <script type="text/javascript" src="../js/dz-common.js"></script>
 <script type="text/javascript">
+	$(function(){
+		$(".dz-btn-danger").on("click",function(){
+			$("#toast").show().addClass("dz_toast_show");
+			setTimeout(function(){
+				$("#toast").hide().removeClass("dz_toast_show");
+			},1500)
+		})
 
+		$("#show-md").on("click",function(){
+			$("#toast-md").show().addClass("dz_toast_show");
+			setTimeout(function(){
+				$("#toast-md").hide().removeClass("dz_toast_show");
+			},1500)
+		})
+
+		$("#show-top").on("click",function(){
+			$("#toast-top").show().addClass("dz_toast_show");
+			setTimeout(function(){
+				$("#toast-top").hide().removeClass("dz_toast_show");
+			},1500)
+		})
+
+		$(".dz-btn-info").on("click",function(){
+			$("#loadingToast").show();
+			setTimeout(function(){
+				$("#loadingToast").hide();
+			},1500)
+		})
+	})
 </script>
