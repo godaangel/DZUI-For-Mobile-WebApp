@@ -73,7 +73,7 @@ select{
 .icon-message1:before { content: "\e606"; }
 .icon-haoyou:before { content: "\e607"; }
 .icon-sousuo:before { content: "\e608"; }
-.icon-zhaopian:before { content: "\e609"; }
+.icon-photo:before { content: "\e609"; }
 .icon-zuanshi:before { content: "\e60a"; }
 .icon-biaoxingfill:before { content: "\e60b"; }
 .icon-biaoxing:before { content: "\e60c"; }
@@ -90,6 +90,8 @@ select{
 .icon-guanbi2fill:before { content: "\e618"; }
 .icon-guanbi2:before { content: "\e619"; }
 .icon-jiahao1:before { content: "\e61a"; }
+.icon-menu-slide:before { content: "\e61b"; }
+.icon-chatboxworking:before { content: "\e61c"; }
 
 .dz-bg-gray{
 	background:#ccc!important;
@@ -210,8 +212,15 @@ select{
 	padding-top: 3rem;
 	padding-bottom: 1rem;
 }
-.dz-flex-wrap{ display: -webkit-box;	display: -webkit-flex;	display: flex; }
-.dz-flex-con{     -webkit-box-flex: 1;     -webkit-flex: 1;    flex: 1;}
+.dz-flex-wrap{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap:wrap;
+  flex-wrap:wrap;
+}
+.dz-flex-con{  margin:0 auto;text-align: center;}
 .dz-flex-vertical{ -webkit-box-orient: vertical;-webkit-flex-flow: column;flex-flow: column;}
 
 /*列表项--菜单列表*/
@@ -980,3 +989,102 @@ select{
 	bottom: calc(80% - 1rem);
 }
 
+/*图片列表*/
+.dz-photo-list{
+  padding: 1rem;
+}
+.dz-photo{
+  width: 9.5rem;
+  height: 7.5rem;
+  background:url('../images/photo.png') no-repeat center;
+  background-size: cover;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+.dz-photo.dz-thumb{
+  border:0.5rem solid #fff;
+}
+.dz-photo.dz-photo-sm{
+  width: 6rem;
+  height: 4.5rem;
+}
+.dz-photo.dz-thumb.dz-photo-sm{
+  border:0.3rem solid #fff;
+}
+
+/*滑动菜单*/
+.dz-slide-menu-bg{
+  position: fixed;
+  display: none;
+  background: rgba(0,0,0,0.6);
+  z-index: 989;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.show .dz-slide-menu-bg{
+  display: block;
+}
+.dz-slide-menu-body{
+  position: fixed;
+  width: 16rem;
+  height: 100%;
+  background: #eee;
+  z-index: 990;
+  -webkit-transform: translate(0,-100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition:  .3s;
+  -ms-transition:  .3s;
+  transition: .3s;
+  overflow: auto;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.dz-left-menu .dz-slide-menu-body{
+  width: 16rem;
+  height: 100%;
+  -webkit-transform: translate(-100%,0);
+  -ms-transform: translate(-100%,0);
+  transform: translate(-100%,0);
+  top: 0;
+}
+.dz-slide-menu.show .dz-slide-menu-body{
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+.dz-top-menu .dz-slide-menu-body{
+  width: 100%;
+  height: 10rem;
+  -webkit-transform: translate(0,-100%);
+  -ms-transform: translate(0,-100%);
+  transform: translate(0,-100%);
+  top: 3rem;
+  z-index: 9;
+}
+.dz-top-menu .dz-slide-menu-bg{
+  z-index: 8;
+}
+.dz-bottom-menu .dz-slide-menu-body{
+  width: 100%;
+  height: 10rem;
+  -webkit-transform: translate(0,100%);
+  -ms-transform: translate(0,100%);
+  transform: translate(0,100%);
+  bottom: 0rem;
+}
+.dz-right-menu .dz-slide-menu-body{
+  width: 16rem;
+  height: 100%;
+  -webkit-transform: translate(100%,0);
+  -ms-transform: translate(100%,0);
+  transform: translate(100%,0);
+  top: 0;
+  right: 0;
+}
