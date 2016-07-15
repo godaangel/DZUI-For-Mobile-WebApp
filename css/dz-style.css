@@ -13,15 +13,15 @@
     html {font-size: 14px;}
 }
  
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 375px) {
     html {font-size: 16px;}
 }
  
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 414px) {
     html {font-size: 18px;}
 }
  
-@media screen and (min-width: 440px) {
+/*@media screen and (min-width: 457px) {
     html {font-size: 20px;}
 }
  
@@ -31,7 +31,7 @@
  
 @media screen and (min-width: 640px) {
     html {font-size: 28px;}
-}
+}*/
 
 body{
 	background: #f4f4f4;
@@ -331,7 +331,9 @@ select{
 	vertical-align: middle;
 	word-wrap: break-word;
 	word-break: break-all;
-	white-space: nowrap;
+}
+.dz-form-cell .dz-form-head{
+  white-space: nowrap;
 }
 .dz-form-cell .dz-form-label{
 	display: block;
@@ -1087,4 +1089,67 @@ select{
   transform: translate(100%,0);
   top: 0;
   right: 0;
+}
+
+/*checkbox & radio*/
+.dz-single-cr{
+  margin-right: 0.5rem;
+  display: inline-block;
+  padding: 0.2rem 0;
+  
+}
+.dz-single-cr.block{
+  display: block;
+  padding: 0.5rem 0;
+}
+.dz-checkbox{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}
+.dz-checkbox + label{
+  vertical-align: middle;
+}
+.dz-checkbox:checked:before{
+  content: " ";
+  background: #04BE02;
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.dz-radio{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0.1rem solid #ccc;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.dz-radio + label{
+  vertical-align: middle;
+}
+.dz-radio:checked:before{
+  content: " ";
+  background: #04BE02;
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
