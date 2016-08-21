@@ -7,6 +7,7 @@
 <meta content="telephone=no" name="format-detection"/>
 <meta content="email=no" name="format-detection"/>
 <link rel="stylesheet" type="text/css" href="../css/dz-style.css">
+<link rel="stylesheet" type="text/css" href="../css/dz-toast.css">
 <link rel="stylesheet" type="text/css" href="../css/demo.css">
 <title>dz-ui</title>
 </head>
@@ -72,7 +73,7 @@
     <!--end toast-->
 
     <!--BEGIN toast-->
-    <div id="toast-md" style="display: none;">
+    <div id="toast-md">
         <div class="dz_toast dz_toast_md">
             <p class="dz_toast_content color-fff">我是Toast-中部</p>
         </div>
@@ -91,27 +92,29 @@
 </html>
 <script src="../js/zepto.min.js"></script>
 <script type="text/javascript" src="../js/dz-common.js"></script>
+<script type="text/javascript" src="../js/dz-toast.js"></script>
 <script type="text/javascript">
 	$(function(){
+		var toast = new Toast();
 		$(".dz-btn-danger").on("click",function(){
-			$("#toast").show().addClass("dz_toast_show");
-			setTimeout(function(){
-				$("#toast").hide().removeClass("dz_toast_show");
-			},1500)
+			toast.init({
+				position: "bottom",
+				message: "我是普通"
+			})
 		})
 
 		$("#show-md").on("click",function(){
-			$("#toast-md").show().addClass("dz_toast_show");
-			setTimeout(function(){
-				$("#toast-md").hide().removeClass("dz_toast_show");
-			},1500)
+			toast.init({
+				position: "md",
+				message: "我是中部"
+			})
 		})
 
 		$("#show-top").on("click",function(){
-			$("#toast-top").show().addClass("dz_toast_show");
-			setTimeout(function(){
-				$("#toast-top").hide().removeClass("dz_toast_show");
-			},1500)
+			toast.init({
+				position: "top",
+				message: "我是上部"
+			})
 		})
 
 		$(".dz-btn-info").on("click",function(){

@@ -1,0 +1,38 @@
+.dz_toast {
+  position: fixed;
+  z-index: 999;
+  min-width: 10rem;
+  height: 3rem;
+  line-height: 3rem;
+  bottom: 1rem;
+  left: 50%;
+  background: rgba(40, 40, 40, 0.75);
+  text-align: center;
+  border-radius: 1.5rem;
+  color: #FFFFFF;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+  padding: 0rem 1rem
+}
+.dz_toast_show .dz_toast {
+  opacity: 1;
+  visibility: visible;
+  bottom: 3rem
+}
+.dz_toast_md {
+  bottom: calc(50% - 3rem)
+}
+.dz_toast_show .dz_toast_md {
+  bottom: calc(50% - 1rem)
+}
+.dz_toast_top {
+  bottom: calc(80% - 3rem)
+}
+.dz_toast_show .dz_toast_top {
+  bottom: calc(80% - 1rem)
+}
